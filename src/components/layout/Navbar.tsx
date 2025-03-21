@@ -34,11 +34,12 @@ export function Navbar() {
   return (
     <header className="bg-black border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-[90rem] mx-auto px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <img src={lothirionLogo} alt="Lothirion" className="h-8 w-auto" />
+            <a href="/" className="flex items-center gap-0">
+              <img src={lothirionLogo} alt="" className="h-12 w-auto" />
+              <span className="text-white text-3xl font-medium -ml-1">Lothirion</span>
             </a>
           </div>
 
@@ -47,7 +48,7 @@ export function Navbar() {
             {navItems.map((item) =>
               item.items ? (
                 <div key={item.title} className="relative group">
-                  <button className="text-white text-sm hover:text-sky-600 transition-colors flex items-center py-2">
+                  <button className="text-white text-sm hover:text-sky-500 transition-colors flex items-center py-2">
                     {item.title}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +71,7 @@ export function Navbar() {
                         <a
                           key={subItem.name}
                           href={subItem.href}
-                          className="block py-2 text-gray-300 hover:text-white text-sm"
+                          className="block py-2 text-gray-300 hover:text-sky-500 text-sm"
                         >
                           {subItem.name}
                         </a>
@@ -82,7 +83,7 @@ export function Navbar() {
                 <a
                   key={item.title}
                   href={item.href || "/"}
-                  className="text-white text-sm hover:text-sky-600 transition-colors py-2"
+                  className="text-white text-sm hover:text-sky-500 transition-colors py-2"
                 >
                   {item.title}
                 </a>
@@ -93,7 +94,7 @@ export function Navbar() {
           {/* Desktop Search & Country Selector */}
           <div className="hidden lg:flex items-center space-x-6">
             {/* Search button */}
-            <button className="text-white hover:text-sky-600 transition-colors">
+            <button className="text-white hover:text-sky-500 transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -113,7 +114,7 @@ export function Navbar() {
 
             {/* Country selector */}
             <div className="relative group">
-              <button className="text-white hover:text-sky-600 transition-colors flex items-center">
+              <button className="text-white hover:text-sky-500 transition-colors flex items-center">
                 <span className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +193,10 @@ export function Navbar() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between mb-8">
-                  <img src={lothirionLogo} alt="Lothirion" className="h-6 w-auto" />
+                  <div className="flex items-center gap-0">
+                    <img src={lothirionLogo} alt="" className="h-8 w-auto" />
+                    <span className="text-white text-lg font-medium -ml-1">Lothirion</span>
+                  </div>
                   <button onClick={() => setMobileMenuOpen(false)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +226,7 @@ export function Navbar() {
                               <a
                                 key={subItem.name}
                                 href={subItem.href}
-                                className="block text-gray-300 hover:text-white text-sm"
+                                className="block text-gray-300 hover:text-sky-500 text-sm"
                               >
                                 {subItem.name}
                               </a>
@@ -238,7 +242,7 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="mt-auto pt-8 border-t border-gray-800 mt-8">
-                  <button className="flex items-center text-white hover:text-sky-600 transition-colors">
+                  <button className="flex items-center text-white hover:text-sky-500 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
