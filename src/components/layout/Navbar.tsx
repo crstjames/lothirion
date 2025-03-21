@@ -1,4 +1,5 @@
 import { useState } from "react";
+import lothirionLogo from "../../assets/lothirion_logo.png";
 
 // Navigation items structure matching Accenture's navigation
 const navItems = [
@@ -37,10 +38,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              {/* Purple logo similar to Accenture's ">" logo */}
-              <span className="text-white text-2xl mr-2  tracking-wider" style={{ fontFamily: "Arial, sans-serif" }}>
-                LOTHIRION
-              </span>
+              <img src={lothirionLogo} alt="Lothirion" className="h-8 w-auto" />
             </a>
           </div>
 
@@ -194,7 +192,7 @@ export function Navbar() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-sky-500 text-3xl font-bold">&gt;</span>
+                  <img src={lothirionLogo} alt="Lothirion" className="h-6 w-auto" />
                   <button onClick={() => setMobileMenuOpen(false)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
